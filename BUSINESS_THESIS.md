@@ -28,11 +28,13 @@ The model should be rejected or changed if driver savings do not materially impr
 ## Disclosure boundary
 
 This public document communicates the thesis, not the recipe. Detailed pricing tiers, thresholds, cost assumptions, unit economics, rollout mechanics and source implementation remain private for partner/investor discussions.
-## Public benchmark: Austria
+## Market benchmark framework
 
-Bolt currently publishes an 18% commission on the final order price in Austria. That gives the thesis a concrete benchmark.
+The project evaluates its economics against the general fee structures and operating models found in ride-hailing markets. Public materials deliberately avoid naming or singling out individual competitors.
 
-| Monthly gross ride value | 18% benchmark platform fee |
+A simple illustrative percentage-fee benchmark shows why platform economics matter:
+
+| Monthly gross ride value | Illustrative 18% platform fee |
 | ---: | ---: |
 | €2,000 | €360 |
 | €3,000 | €540 |
@@ -41,7 +43,7 @@ Bolt currently publishes an 18% commission on the final order price in Austria. 
 | €6,000 | €1,080 |
 | €8,000 | €1,440 |
 
-These figures are a simple benchmark calculation, not an estimate of typical driver turnover and not a claim about Global Ride pricing.
+The 18% figure above is an **illustrative scenario**, not a statement about any named company, market average or competitor. The gross ride values are also scenarios rather than claims about typical driver turnover.
 
 The strategic question is whether Global Ride can capture enough recurring platform revenue to fund a reliable marketplace while allowing highly active supply to retain meaningfully more of its ride value.
 
