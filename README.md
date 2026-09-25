@@ -145,6 +145,12 @@ The working demo includes the complete ride lifecycle: destination autocomplete,
 
 The screenshot above is captured from the running Android demo and shows the live destination-search flow for Vienna Airport.
 
+## Public communication principles
+
+Global Ride's public materials focus on its own product, hypotheses and demonstrated capabilities. Market examples are described generically and illustrative calculations are labelled as scenarios. The project does not make claims about the quality, conduct, motives or performance of identifiable competitors.
+
+Business assumptions remain hypotheses until validated with observed data. Prototype capabilities are described as prototype capabilities; they are not presented as production scale, regulatory approval or commercial traction.
+
 ## Two reasons to start a conversation
 
 ### For engineering teams
