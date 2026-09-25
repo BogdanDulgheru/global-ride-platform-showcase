@@ -81,7 +81,6 @@ The screenshot is from the running Android prototype, not a design mockup.
 | Mapping | Google Maps Platform |
 | Data architecture | SQLAlchemy / PostgreSQL-oriented |
 | Development | Git / GitHub |
-| Workflow | AI-assisted engineering with human architecture, validation and testing |
 
 ## Investor snapshot
 
@@ -157,6 +156,6 @@ Global Ride describes its own product and hypotheses. It does not make claims ab
 
 ### About the developer
 
-Global Ride is a hands-on portfolio and product project by **Bogdan Dulgheru**, built with an AI-assisted engineering workflow while retaining responsibility for architecture, implementation decisions, validation, debugging and testing.
+Global Ride is a hands-on portfolio and product project by **Bogdan Dulgheru**, covering product thinking, architecture, implementation, validation, debugging and testing.
 
 **Status:** active development · working prototype · pre-validation
