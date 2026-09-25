@@ -22,6 +22,30 @@ The next step is validation: testing the commercial model, unit economics and go
 This repository is intentionally a **showcase, not a source-code mirror**. It reveals the product, architecture and engineering decisions while keeping implementation details and commercially sensitive logic private.
 
 
+## Investor snapshot
+
+**Stage:** working prototype / pre-validation  
+**Product proof:** connected passenger and driver ride lifecycle demonstrated end to end  
+**Business question:** can a different platform-cost relationship improve alignment while still supporting sustainable marketplace economics?  
+**Validation focus:** local liquidity, active supply, repeat passenger demand, contribution economics and regulatory feasibility  
+**Defensibility objective:** build advantage through marketplace execution, operating model, product quality and accumulated validation — not through unsupported claims about competitors.
+
+### What has been de-risked
+
+- The core passenger and driver product journeys can be implemented and demonstrated.
+- Mobile, backend, maps/location and ride-state components can work as a connected prototype.
+- The commercial hypothesis is concrete enough to model and test.
+
+### What remains unproven
+
+- willingness of drivers/operators to adopt the proposed commercial relationship;
+- ability to create dense local supply and passenger demand;
+- sustainable customer-acquisition and support economics;
+- regulatory and operating structure for a live launch;
+- retention, utilization and contribution margin under real usage.
+
+This distinction is deliberate: **the prototype is evidence of execution; it is not evidence of market traction.**
+
 ## Product thesis
 
 Most ride-hailing platforms monetize activity as it happens. Global Ride is exploring whether a more predictable platform-cost relationship can create stronger alignment for active drivers and operators while still funding a sustainable marketplace.
