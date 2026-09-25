@@ -2,9 +2,9 @@
 
 This document records the questions the project must survive before its commercial thesis should be treated as validated.
 
-## 1. The incumbent advantage is liquidity
+## 1. The established platform advantage is liquidity
 
-A lower platform fee does not automatically create a better marketplace. Passengers care about availability, wait time, price, reliability and trust. Drivers care about ride volume as well as commission. An incumbent can remain economically attractive even with a higher fee if it generates materially more paid utilization.
+A lower platform fee does not automatically create a better marketplace. Passengers care about availability, wait time, price, reliability and trust. Drivers care about ride volume as well as commission. An established platform can remain economically attractive even with a higher fee if it generates materially more paid utilization.
 
 **Test:** compare driver net economics per online hour, not only fee percentage.
 
