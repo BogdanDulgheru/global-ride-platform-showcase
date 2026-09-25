@@ -1,5 +1,11 @@
 # Global Ride — Demo Walkthrough
 
+> **One journey. Two sides of the marketplace. One connected product loop.**
+
+<p align="center">
+  <img src="assets/destination-search.jpg" width="320" alt="Global Ride running Android destination search" />
+</p>
+
 This document describes the public product demo without exposing implementation details.
 
 ## Passenger journey
@@ -34,3 +40,8 @@ This prototype does not claim production scale, live marketplace liquidity, prod
 ## What stays private
 
 The public demo intentionally excludes source code, credentials, internal API implementation, detailed pricing mechanics, proprietary business rules and the private unit-economics model.
+## Demo status
+
+The public demo is intentionally visual and descriptive rather than an executable source distribution. The implementation remains private so the product can be evaluated without publishing the complete codebase or commercially sensitive logic.
+
+For a technical review, the architecture and selected implementation details can be discussed privately.
