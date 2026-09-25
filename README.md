@@ -1,201 +1,162 @@
-# Global Ride Platform — Engineering Showcase
+# Global Ride — Product & Engineering Showcase
 
-> **What if ride-hailing could be built around more predictable economics for the people doing the driving?**
->
-> Global Ride is a working product prototype exploring that question — with a real passenger-to-driver journey already implemented across Flutter, FastAPI and Google Maps.
+> **What if a ride-hailing marketplace could create a more predictable economic relationship with the people supplying the rides?**
 
-[![Flutter](https://img.shields.io/badge/Flutter-Dart-02569B?logo=flutter)](https://flutter.dev/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-Python-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
-[![Google Maps](https://img.shields.io/badge/Google%20Maps-Platform-4285F4?logo=googlemaps)](https://mapsplatform.google.com/)
-![Repository](https://img.shields.io/badge/source-private-important)
+Global Ride is a **working ride-hailing prototype in pre-validation**. It combines a Flutter mobile experience with a Python/FastAPI backend and Google Maps services to demonstrate a connected passenger ↔ driver journey.
+
+This repository is intentionally a **showcase, not a source-code mirror**.
+
+[View the demo walkthrough](DEMO.md) · [Read the business thesis](BUSINESS_THESIS.md) · [See the pilot framework](PILOT_VALIDATION.md)
+
+---
 
 ## The story
 
-Ride-hailing looks simple from the passenger seat: choose a destination, request a car, arrive. Behind that interaction is a marketplace that must keep passengers, drivers, operators and the platform economically aligned.
+Ride-hailing looks simple from the passenger seat: choose a destination, request a car and arrive. The difficult part is the marketplace behind that interaction — aligning passengers, drivers, operators and the platform while maintaining availability, reliability and sustainable economics.
 
-Global Ride started from a business question rather than a UI exercise: **can the platform relationship be designed differently while still delivering the experience users expect?**
+Global Ride began with a business question rather than a UI exercise:
 
-The first step was to build the product loop and make it tangible. The current prototype takes a passenger from destination search and route pricing through driver matching, pickup, ride completion, rating, tip, payment selection and receipt. A separate driver experience handles incoming requests and the operational ride lifecycle.
+**Can that relationship be designed differently while preserving the experience passengers expect?**
 
-The next step is validation: testing the commercial model, unit economics and go-to-market assumptions against real market conditions. No public claim is made here about traction, revenue or production scale that has not yet been demonstrated.
+The first milestone was execution. Instead of stopping at a pitch deck, the idea became a working prototype with separate passenger and driver flows.
 
-This repository is intentionally a **showcase, not a source-code mirror**. It reveals the product, architecture and engineering decisions while keeping implementation details and commercially sensitive logic private.
+The next milestone is evidence: validate supply, demand, local marketplace liquidity, economics and regulatory feasibility under real conditions.
 
+## Working product journey
+
+**Passenger**
+
+Destination search → route calculation → Economy / Comfort / XL → ride request → driver matching → pickup → active ride → completion → rating & tip → demo payment → receipt
+
+**Driver**
+
+Online → incoming request → accept → drive to pickup → passenger pickup → start ride → active ride → complete
+
+### Running Android demo
+
+<p align="center">
+  <img src="assets/destination-search.jpg" width="320" alt="Global Ride destination search showing Vienna Airport autocomplete" />
+</p>
+
+The screenshot is from the running Android prototype, not a design mockup.
+
+## What the prototype demonstrates
+
+- Passenger and driver application modes
+- Destination search and place autocomplete
+- Google Maps integration and location-aware routing
+- Economy, Comfort and XL ride categories
+- Ride request and driver acceptance workflow
+- Pickup, active-trip and completion states
+- Passenger rating, comments and tipping
+- Demo payment and receipt flow
+- Flutter ↔ FastAPI HTTP integration
+- Persistent ride/domain data architecture
+- Separated user, driver, operator and vehicle concepts
+- Modular backend structure across API, schema, service, model and database layers
+
+## Architecture
+
+```text
+┌──────────────────────────┐
+│      Flutter Client      │
+│ Passenger / Driver flows │
+└─────────────┬────────────┘
+              │ HTTP
+              ▼
+┌──────────────────────────┐
+│     Python / FastAPI     │
+│ API · Services · Schemas │
+└───────┬─────────┬────────┘
+        │         │
+        ▼         ▼
+  Domain/Data   Maps/Places
+    Layer       Route Services
+```
+
+| Area | Technology |
+| --- | --- |
+| Mobile | Flutter / Dart |
+| Backend | Python / FastAPI |
+| Mapping | Google Maps Platform |
+| Data architecture | SQLAlchemy / PostgreSQL-oriented |
+| Development | Git / GitHub |
+| Workflow | AI-assisted engineering with human architecture, validation and testing |
 
 ## Investor snapshot
 
 **Stage:** working prototype / pre-validation  
 **Product proof:** connected passenger and driver ride lifecycle demonstrated end to end  
 **Business question:** can a different platform-cost relationship improve alignment while still supporting sustainable marketplace economics?  
-**Validation focus:** local liquidity, active supply, repeat passenger demand, contribution economics and regulatory feasibility  
-**Defensibility objective:** build advantage through marketplace execution, operating model, product quality and accumulated validation — not through unsupported claims about competitors.
+**Validation focus:** local liquidity, active supply, repeat passenger demand, contribution economics and regulatory feasibility
 
-### What has been de-risked
+### De-risked so far
 
-- The core passenger and driver product journeys can be implemented and demonstrated.
-- Mobile, backend, maps/location and ride-state components can work as a connected prototype.
+- The core passenger and driver journeys can be implemented and demonstrated.
+- Mobile, backend, maps/location and ride-state components work as a connected prototype.
 - The commercial hypothesis is concrete enough to model and test.
 
-### What remains unproven
+### Still unproven
 
-- willingness of drivers/operators to adopt the proposed commercial relationship;
-- ability to create dense local supply and passenger demand;
-- sustainable customer-acquisition and support economics;
-- regulatory and operating structure for a live launch;
-- retention, utilization and contribution margin under real usage.
+- driver/operator willingness to adopt the proposed commercial relationship;
+- ability to create dense local supply and repeat passenger demand;
+- sustainable acquisition, support and operating economics;
+- regulatory structure for a live commercial launch;
+- retention, utilization and contribution economics under real usage.
 
-This distinction is deliberate: **the prototype is evidence of execution; it is not evidence of market traction.**
+**The prototype is evidence of execution. It is not presented as evidence of market traction.**
 
 ## Product thesis
 
-Most ride-hailing platforms monetize activity as it happens. Global Ride is exploring whether a more predictable platform-cost relationship can create stronger alignment for active drivers and operators while still funding a sustainable marketplace.
+Global Ride is exploring whether an alternative platform-cost structure can create stronger alignment for active supply while still funding a sustainable marketplace.
 
-That is a **hypothesis to validate**, not a claim of proven superiority. The public showcase deliberately does not publish the detailed pricing formula, internal unit-economics model or commercialization logic.
+That is a **hypothesis to validate**, not a claim of superiority.
 
-### Why this is worth testing
+The detailed pricing formula, thresholds, unit-economics assumptions and commercialization mechanics are deliberately not published here.
 
-- Driver economics are directly affected by platform fees and utilization.
-- A marketplace still needs enough revenue to fund acquisition, support, payments, safety, infrastructure and operations.
-- Lower fees alone are not a moat: liquidity, reliability, trust and distribution matter.
-- Therefore the opportunity is not simply to be "cheaper" — it is to test whether a different economic relationship can improve alignment without weakening the marketplace.
+## Validation philosophy
 
-### Market reality check
+A marketplace is not successful because it has registrations. The meaningful signals are active supply, completed rides, passenger repeat behavior, acceptance/completion rates, service availability and contribution economics.
 
-For one concrete benchmark, Bolt currently publishes an **18% commission in Austria**. That makes platform economics a measurable driver-side cost rather than an abstract product question. Global Ride's commercial model is being evaluated against real market structures like this, not against an invented competitor model.
+The planned validation sequence is:
 
-## What the project demonstrates
+1. **Product reliability** — ensure software defects do not distort the test.
+2. **Local liquidity** — concentrate supply and demand rather than pretending to launch everywhere.
+3. **Behavioral evidence** — measure actual usage and repeat behavior.
+4. **Economic evidence** — test realistic revenue against acquisition, support and operating costs.
+5. **Expansion** — widen geography only if the earlier gates survive.
 
-- Passenger and driver application modes
-- Destination search and place autocomplete
-- Google Maps integration, GPS/location handling and route computation
-- Ride categories: Economy, Comfort and XL
-- Ride request and driver acceptance workflow
-- Persistent ride storage through SQLAlchemy/PostgreSQL-oriented data access
-- Driver, operator, user and vehicle domain models
-- Ride feedback with rating, tip and comments
-- Payment/receipt domain flow implemented as demo infrastructure
-- HTTP API communication between Flutter and FastAPI
-- Modular backend structure with API, schemas, services, models and database layers
+## What stays private
 
-## Architecture
+To make the project visible without giving away the implementation, this public repository deliberately excludes:
 
-```text
-┌─────────────────────────────────────┐
-│            Flutter Client           │
-│                                     │
-│ Passenger UI        Driver UI       │
-│ Maps • GPS • Search • Ride Flow     │
-└──────────────────┬──────────────────┘
-                   │ HTTP / JSON
-                   ▼
-┌─────────────────────────────────────┐
-│          Python / FastAPI API       │
-│                                     │
-│ Places • Routes • Rides • Payments  │
-└─────────┬───────────────┬───────────┘
-          │               │
-          ▼               ▼
-┌─────────────────┐  ┌────────────────┐
-│ Google Maps     │  │ Service / Data │
-│ Places & Routes │  │ Access Layers  │
-└─────────────────┘  └───────┬────────┘
-                              ▼
-                     ┌────────────────┐
-                     │ SQLAlchemy /   │
-                     │ PostgreSQL     │
-                     └────────────────┘
-```
-
-## Technology stack
-
-| Layer | Technologies |
-| --- | --- |
-| Mobile / UI | Flutter, Dart, Material |
-| Maps & location | Google Maps Flutter, Geolocator, Google Places & Routes APIs |
-| API | Python, FastAPI, Pydantic |
-| HTTP | Dart HTTP, HTTPX |
-| Persistence | SQLAlchemy, PostgreSQL-oriented persistence |
-| Local state | SharedPreferences |
-| Domain | Passenger, Driver, Operator, Vehicle, Ride, Payment |
-| Engineering workflow | Git, GitHub, AI-assisted development |
-
-## Backend organization
-
-The private implementation is organized around clear responsibilities:
-
-```text
-backend/
-├── app/
-│   ├── api/          # HTTP route modules
-│   ├── core/         # shared utilities
-│   ├── database/     # persistence and data-access layer
-│   ├── models/       # domain models
-│   ├── schemas/      # request/response contracts
-│   └── services/     # maps, rides and payment logic
-└── main.py           # FastAPI application
-```
-
-The Flutter application contains the passenger/driver experience, map interaction, destination workflow and API communication.
-
-## Engineering decisions
-
-**Server-side Maps access.** Sensitive server credentials are read from environment configuration rather than committed to source control. Places and route operations are exposed through backend endpoints.
-
-**Persistent ride state.** Ride data is handled through a service/data-access layer rather than relying on in-memory application state.
-
-**Separated domain concepts.** Users, drivers, operators and vehicles are represented independently so the model can evolve beyond a single-user prototype.
-
-**Explicit API contracts.** Pydantic schemas define ride creation, acceptance, routing, feedback and payment-related requests.
-
-## Current project status
-
-**Stage: working prototype / pre-validation.**
-
-Global Ride is not presented as a production transportation service and does not claim live-market traction. The current implementation demonstrates the application architecture and core ride lifecycle. Payment processing is intentionally demo infrastructure; no real card processor is connected.
-
-The important distinction is that this is no longer only a concept: the product journey can be demonstrated end to end. The commercial thesis still has to earn its proof through market validation.
-
-Areas intended for further development include authentication/authorization hardening, production payment integration, real-time event delivery, automated testing, deployment infrastructure and production observability.
-
-## Screenshots & demo
-
-### Passenger destination search
-
-<p align="center">
-  <img src="assets/destination-search.jpg" width="320" alt="Global Ride destination search showing Vienna Airport autocomplete" />
-</p>
-
-The working demo includes the complete ride lifecycle: destination autocomplete, route calculation, Economy/Comfort/XL fare selection, driver matching, driver acceptance, pickup/arrival, ride start and completion, passenger rating and tip, payment selection, and receipt generation.
-
-The screenshot above is captured from the running Android demo and shows the live destination-search flow for Vienna Airport.
-
-## Public communication principles
-
-Global Ride's public materials focus on its own product, hypotheses and demonstrated capabilities. Market examples are described generically and illustrative calculations are labelled as scenarios. The project does not make claims about the quality, conduct, motives or performance of identifiable competitors.
-
-Business assumptions remain hypotheses until validated with observed data. Prototype capabilities are described as prototype capabilities; they are not presented as production scale, regulatory approval or commercial traction.
+- complete application source code;
+- credentials, API keys and environment configuration;
+- internal endpoint implementations;
+- detailed pricing thresholds and charging formula;
+- private unit-economics assumptions and contribution targets;
+- commercially sensitive rollout and partner mechanics.
 
 ## Two reasons to start a conversation
 
-### For engineering teams
+### Engineering teams
 
-The project demonstrates product-oriented engineering across mobile UI, backend APIs, maps/location services, domain modelling and end-to-end workflow validation. **Full source code is maintained privately and can be made available for controlled technical review upon request.**
+Global Ride demonstrates product-oriented engineering across mobile UI, backend APIs, maps/location services, domain modelling and end-to-end workflow validation.
 
-### For investors & strategic partners
+The complete source is maintained privately and can be considered for **controlled technical review** when appropriate.
 
-The interesting question is larger than the prototype: **can a different platform-cost model create a ride-hailing marketplace with better alignment while preserving sustainable platform economics?** Detailed unit economics, pricing mechanics and pilot assumptions are intentionally kept outside the public repository and can be discussed privately.
+### Investors & strategic partners
 
-> **Public by design:** product story, working flows, high-level architecture and demonstrated capabilities.  
-> **Private by design:** complete source, credentials, internal APIs, detailed pricing logic, unit-economics model and commercially sensitive implementation.
+The larger question is whether the product thesis can become a sustainable marketplace. Detailed economics, pilot assumptions and commercialization mechanics are reserved for private discussion.
 
-## About the developer
+## Public communication standard
 
-Built by **Bogdan Dulgheru** as a portfolio engineering project focused on Python, AI-assisted software development, backend architecture and cross-platform application development.
-
-AI coding tools are used as part of the engineering workflow while architecture, validation, testing and final implementation decisions remain developer responsibilities.
+Global Ride describes its own product and hypotheses. It does not make claims about the quality, motives or conduct of identifiable competitors. Illustrative economics are labelled as scenarios, and unvalidated assumptions are presented as hypotheses rather than facts.
 
 ---
 
-### Why this repository is public
+### About the developer
 
-The goal of this repository is to let recruiters and engineering teams evaluate the project's scope, architecture and engineering decisions without publishing the complete implementation or sensitive configuration.
+Global Ride is a hands-on portfolio and product project by **Bogdan Dulgheru**, built with an AI-assisted engineering workflow while retaining responsibility for architecture, implementation decisions, validation, debugging and testing.
+
+**Status:** active development · working prototype · pre-validation
