@@ -105,7 +105,15 @@ Areas intended for further development include authentication/authorization hard
 
 ## Screenshots & demo
 
-A visual walkthrough will be added here as the UI demo assets are prepared.
+### Passenger destination search
+
+<p align="center">
+  <img src="assets/destination-search.jpg" width="320" alt="Global Ride destination search showing Vienna Airport autocomplete" />
+</p>
+
+The working demo includes the complete ride lifecycle: destination autocomplete, route calculation, Economy/Comfort/XL fare selection, driver matching, driver acceptance, pickup/arrival, ride start and completion, passenger rating and tip, payment selection, and receipt generation.
+
+The screenshot above is captured from the running Android demo and shows the live destination-search flow for Vienna Airport.
 
 > **Full source code is maintained in a private repository and can be made available for technical review upon request.**
 
